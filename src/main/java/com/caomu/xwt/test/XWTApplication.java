@@ -30,15 +30,8 @@
  *                   别人笑我忒疯癫，我笑自己命太贱；
  *                   不见满街漂亮妹，哪个归得程序员？
  *
- * Created by caomu on 2016年10月17日 11时24分59秒 星期一.
- */
-
-/**
- * 
- */
-package com.caomu.xwt.test;
-
-import java.net.URL;
+ * Created by caomu on 2016年10月17日 11时31分08秒 星期一.
+ */URL;
 
 import org.eclipse.e4.xwt.IConstants;
 import org.eclipse.e4.xwt.XWT;

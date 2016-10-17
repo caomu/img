@@ -30,7 +30,7 @@
  *                   别人笑我忒疯癫，我笑自己命太贱；
  *                   不见满街漂亮妹，哪个归得程序员？
  *
- * Created by caomu on 2016年10月17日 11时24分59秒 星期一.
+ * Created by caomu on 2016年10月17日 11时31分08秒 星期一.
  */
 
 /**
@@ -38,18 +38,13 @@
  */
 package com.caomu.img;
 
-import java.net.URL;
-
 import org.eclipse.e4.xwt.IConstants;
 import org.eclipse.e4.xwt.XWT;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.DirectoryDialog;
-import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.*;
+
+import java.net.URL;
 
 /**
  * @author gr5154
