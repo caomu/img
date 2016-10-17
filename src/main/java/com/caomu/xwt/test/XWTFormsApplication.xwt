@@ -1,0 +1,7 @@
+<Shell xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt"
+	x:Class="com.caomu.xwt.test.XWTFormsApplication" text="XWT Forms Application" xmlns:p1="clr-namespace:org.eclipse.swt.browser">
+	<Shell.layout>
+		<RowLayout />
+	</Shell.layout>
+</Shell>
+<!-- Forms API -->
