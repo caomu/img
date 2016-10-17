@@ -33,6 +33,8 @@
  * Created by caomu on 2016年10月17日 11时31分37秒 星期一.
  */URL;
 
+import java.net.URL;
+
 import org.eclipse.e4.xwt.IConstants;
 import org.eclipse.e4.xwt.XWT;
 import org.eclipse.swt.graphics.Rectangle;
@@ -51,12 +53,13 @@ public class XWTApplication {
 		Control control = XWT.load(url);
 		Shell shell = control.getShell();
 		shell.layout();
-		centerInDisplay(shell);
+		XWTApplication.centerInDisplay(shell);
 		// run events loop
 		shell.open();
 		while (!shell.isDisposed()) {
-			if (!shell.getDisplay().readAndDispatch())
+			if (!shell.getDisplay().readAndDispatch()) {
 				shell.getDisplay().sleep();
+			}
 		}
 	}
 

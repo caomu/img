@@ -1,3 +1,5 @@
+package com.caomu.img;
+
 /*
  *                             _ooOoo_
  *                            o8888888o
@@ -31,7 +33,9 @@
  *                   不见满街漂亮妹，哪个归得程序员？
  *
  * Created by caomu on 2016年10月17日 11时31分37秒 星期一.
- */io.IOException;
+ */
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -40,6 +44,7 @@ import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
+import com.drew.metadata.exif.ExifDirectoryBase;
 import com.drew.metadata.exif.ExifSubIFDDirectory;
 
 public class EXIFReader {
@@ -52,19 +57,15 @@ public class EXIFReader {
 		try {
 			metadata = ImageMetadataReader.readMetadata(jpegFile);
 			for (Directory directory : metadata.getDirectories()) {
-				System.out.println("~~~~~~~~~~~~~~~"
-						+ directory.getClass().getName());
+				System.out.println("~~~~~~~~~~~~~~~" + directory.getClass().getName());
 				for (Tag tag : directory.getTags()) {
-					System.out.println(tag.getClass().getName() + "||||||"
-							+ tag);
+					System.out.println(tag.getClass().getName() + "||||||" + tag);
 				}
 			}
 			// obtain the Exif directory
-			Directory directory = metadata
-					.getDirectory(ExifSubIFDDirectory.class);
+			Directory directory = metadata.getDirectory(ExifSubIFDDirectory.class);
 			// query the tag's value
-			Date date = directory
-					.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL);
+			Date date = directory.getDate(ExifDirectoryBase.TAG_DATETIME_ORIGINAL);
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
 			System.out.println(sdf.format(date));

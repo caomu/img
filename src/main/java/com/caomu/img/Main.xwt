@@ -1,42 +1,43 @@
 <Shell xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt"
-	x:Class="com.caomu.img.Main" text="img Application">
-	<Shell.layout>
-		<RowLayout />
-	</Shell.layout>
-	<Composite>
-		<Composite.layoutData>
-			<RowData width="97" height="54"/>
-		</Composite.layoutData>
-	</Composite>
-	<Button text="Open folder..." x:Style="CENTER" x:Name="openFolderButton"
-		MouseDownEvent="onOpenFolderButtonMouseDown" toolTipText="open folder" />
-	<Composite>
-		<Composite.layout>
-			<GridLayout/>
-		</Composite.layout>
-		<Composite.layoutData>
-			<RowData width="193" height="64"/>
-		</Composite.layoutData>
-	</Composite>
-	<Text x:Style="BORDER" x:Name="folderPathText">
-		<Text.layoutData>
-			<RowData width="400"/>
-		</Text.layoutData>
-	</Text>
-	<Composite>
-		<Composite.layoutData>
-			<RowData height="27" width="153"/>
-		</Composite.layoutData>
-	</Composite>
-	<Button text="start" MouseDownEvent="onStartButtonMouseDown" x:Name="startButton" toolTipText="start"/>
-	<Composite>
-		<Composite.layoutData>
-			<RowData height="32" width="195"/>
-		</Composite.layoutData>
-	</Composite>
-	<Text x:Style="BORDER | READ_ONLY | H_SCROLL | V_SCROLL | CANCEL | MULTI">
-		<Text.layoutData>
-			<RowData height="520" width="403"/>
-		</Text.layoutData>
-	</Text>
+  x:Class="com.caomu.img.Main" text="img Application">
+  <Shell.layout>
+    <RowLayout />
+  </Shell.layout>
+  <Composite>
+    <Composite.layoutData>
+      <RowData width="97" height="54" />
+    </Composite.layoutData>
+  </Composite>
+  <Button text="Open folder..." x:Style="CENTER" x:Name="openFolderButton"
+    MouseDownEvent="onOpenFolderButtonMouseDown" toolTipText="open folder" />
+  <Composite>
+    <Composite.layout>
+      <GridLayout />
+    </Composite.layout>
+    <Composite.layoutData>
+      <RowData width="193" height="64" />
+    </Composite.layoutData>
+  </Composite>
+  <Text x:Style="BORDER" x:Name="folderPathText">
+    <Text.layoutData>
+      <RowData width="400" />
+    </Text.layoutData>
+  </Text>
+  <Composite>
+    <Composite.layoutData>
+      <RowData height="27" width="153" />
+    </Composite.layoutData>
+  </Composite>
+  <Button text="start" MouseDownEvent="onStartButtonMouseDown"
+    x:Name="startButton" toolTipText="start" />
+  <Composite>
+    <Composite.layoutData>
+      <RowData height="32" width="195" />
+    </Composite.layoutData>
+  </Composite>
+  <Text x:Style="BORDER | READ_ONLY | H_SCROLL | V_SCROLL | CANCEL | MULTI">
+    <Text.layoutData>
+      <RowData height="520" width="403" />
+    </Text.layoutData>
+  </Text>
 </Shell>

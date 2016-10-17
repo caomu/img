@@ -1,3 +1,5 @@
+package com.caomu.xwt.test;
+
 /*
  *                             _ooOoo_
  *                            o8888888o
@@ -31,7 +33,7 @@
  *                   不见满街漂亮妹，哪个归得程序员？
  *
  * Created by caomu on 2016年10月17日 11时31分37秒 星期一.
- */URL;
+ */
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,15 +54,13 @@ public class XWTComposite extends Composite {
 		super(parent, style);
 		setLayout(new FillLayout());
 		// load XWT
-		String name = XWTComposite.class.getSimpleName()
-				+ IConstants.XWT_EXTENSION_SUFFIX;
+		String name = XWTComposite.class.getSimpleName() + IConstants.XWT_EXTENSION_SUFFIX;
 		try {
 			URL url = XWTComposite.class.getResource(name);
-			Map<String, Object> options = new HashMap<String, Object>();
+			Map<String, Object> options = new HashMap<>();
 			options.put(IXWTLoader.CLASS_PROPERTY, this);
 			options.put(IXWTLoader.CONTAINER_PROPERTY, this);
-			XWT.setLoadingContext(new DefaultLoadingContext(this.getClass()
-					.getClassLoader()));
+			XWT.setLoadingContext(new DefaultLoadingContext(this.getClass().getClassLoader()));
 			XWT.loadWithOptions(url, options);
 		} catch (Throwable e) {
 			throw new Error("Unable to load " + name, e);
